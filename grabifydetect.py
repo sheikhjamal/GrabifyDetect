@@ -21,7 +21,7 @@ linklist = (
 
 def check_link():
     link = entry.get()
-    domain = urlparse(link).netloc.lower()  # Convert to lowercase for case-insensitive comparison
+    domain = urlparse(link).netloc.lower()  
     if domain in linklist:
         result_label.config(text=link + " is not a Grabify link")
     else:
@@ -30,7 +30,7 @@ def check_link():
 
 window = tk.Tk()
 window.title("Grabify Detector")
-window.geometry("400x250")  # Set the window size
+window.geometry("400x250")  
 
 title_label = ttk.Label(window, text="Grabify Detector", font=("Arial", 16))
 title_label.pack(pady=20)
